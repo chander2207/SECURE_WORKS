@@ -66,8 +66,9 @@ int main(){
                                 cout << "buff: "<< buff <<endl;
 				
 				/* Read the content of the pipe */
-                                if (read(fd_child1[READ_END], buff+1, count) == count)
+                                if (read(fd_child1[READ_END], buff+1, count) == count){
                                         //fprintf(stdout,"Child1: received \"%s\"\n", buff);
+				}
 				string str(buff);
 				
 				/* Get the process_id using the process_name */
@@ -131,8 +132,9 @@ int main(){
                                 //cout << "buff: "<< buff <<endl;
                                 
 				/* Read the content of the pipe */
-				if (read(fd_child2[READ_END], buff+1, count) == count)
+				if (read(fd_child2[READ_END], buff+1, count) == count){
                                         //fprintf(stdout,"Child2: received \"%s\"\n", buff);
+				}
                                 string str(buff);
                 		
 				/* List all the content of the directory */
