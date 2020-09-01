@@ -24,6 +24,15 @@
 		    that directory_path is entered.
 		--> Exit code: To exit code, user need to input '3'.
 
+# To deal with accepting multiple request, The input values can be queued in the buffer
+  of type queue. The parent would check the type of the input entered by the user and 
+  based on that it will enter the respective content for the child processes in their
+  respective queue. We can set the limit of the queue to a certain level to hold maximum
+  possible values.
+  Here I am considering separate queues in order to avoid extra checks by each child pro-
+  cess and many splitting and analysis of the input text. Otherwise, it would lead to 
+  the multiple checks.
+  
 # Assumption
 	# In case of the cpu information for the process Id. I considered fetching per-
 	  process associated cpu information present in the stat file.
